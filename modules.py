@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 def embedding_lookup(lookup_table, x):
     return tf.compat.v1.nn.embedding_lookup(lookup_table, x)

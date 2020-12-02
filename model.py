@@ -39,6 +39,7 @@ class PopMusicTransformer(object):
     # load model
     ########################################
     def load_model(self):
+        tf.compat.v1.disable_eager_execution()
         # placeholders
         self.x = tf.compat.v1.placeholder(tf.int32, shape=[self.batch_size, None])
         self.y = tf.compat.v1.placeholder(tf.int32, shape=[self.batch_size, None])
